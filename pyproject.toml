@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "lambda-api-template"
+version = "1.0.0"
+description = ""
+authors = ["Thijs Baaijen <Thijss@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.95.0"
+uvicorn = {extras = ["standard"], version = "^0.21.1"}
+mangum = "^0.17.0"
+boto3 = "^1.26.99"
+python-dotenv = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+pylint = "^2.17.1"
+pytest = "^7.3.0"
+httpx = "^0.24.0"
+coverage = "^7.2.3"
+pycodestyle = "^2.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.messages_control]
+max-line-length = 120
+extension-pkg-allow-list = ["pydantic"]
+
+[tool.black]
+line-length = 120

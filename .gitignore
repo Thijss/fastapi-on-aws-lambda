@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Pycharm
+.idea/
+
+# Visual Studio Code
+launch.json
+settings.json
+
+# MacOS
+.DS_Store
+
+# overage
+htmlcov
+.coverage
+
+# Package builds
+dist
+
+# Assets
+assets
+
+# Zip files
+*.zip
