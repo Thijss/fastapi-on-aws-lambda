@@ -1,4 +1,4 @@
-# FastAPI on AWS Lambda with AWS S3
+# FastAPI on AWS Lambda (with AWS S3)
 Welcome to my template repository for running FastAPI on AWS Lambda with an optional link to AWS S3.
 
 ## AWS deployment
