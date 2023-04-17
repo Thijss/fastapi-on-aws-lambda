@@ -48,13 +48,13 @@ class ApiSettings(BaseSettings):
         @classmethod
         def parse_env_var(cls, field_name: str, raw_val: str) -> Any:
             """Parse environment variables."""
-            if field_name in [
+            if field_name.lower() in [
                 "http_allowed_methods",
                 "http_allowed_headers",
                 "http_allowed_origins",
             ]:
                 raw_val = [(x.strip()) for x in raw_val.split(",")]
-                if field_name == "http_allowed_methods":
+                if field_name.lower() == "http_allowed_methods":
                     return [HttpMethod(x).value for x in raw_val]
                 return raw_val
             # pylint: disable=no-member
