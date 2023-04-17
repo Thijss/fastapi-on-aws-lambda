@@ -18,7 +18,7 @@ def get_app() -> FastAPI:
         CORSMiddleware,
         allow_origins=api_settings.http_allowed_origins,
         allow_credentials=True,
-        allow_methods=[method.name for method in api_settings.http_allowed_methods],
+        allow_methods=api_settings.http_allowed_methods,
         allow_headers=api_settings.http_allowed_headers,
     )
     return server
